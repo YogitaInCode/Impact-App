@@ -1,0 +1,6 @@
+{
+  "name": "IMPACT CAMPUS",
+  "description": "College Management Database and AI-Powered Smart Attendance System for Impact College of Engineering and Applied Sciences, Bengaluru.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

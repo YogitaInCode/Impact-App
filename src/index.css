@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    /* Impact College of Engineering — Wine Red, Warm Ivory & Gold Design Tokens */
+    --brand-primary: #722F37;
+    --brand-primary-dark: #5A242B;
+    --brand-primary-light: #8B3A44;
+    --brand-rose: #B76E79;
+    --brand-cream: #F7F3EE;
+    --brand-gold: #D4AF37;
+    --brand-gold-accessible: #8A6D0B;
+    --brand-success: #16A34A;
+    --brand-success-accessible: #15803D;
+    --brand-white: #FFFFFF;
+
+    /* Surface & Semantic Tokens (Light Mode — Warm Ivory & Glassmorphic White) */
+    --surface-canvas: #FCFAF8;
+    --surface-card: #FFFFFF;
+    --surface-subtle: #F7F3EE;
+    --border-default: #E5E7EB;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --sidebar-bg: #291115;
+  }
+
+  .dark {
+    --brand-primary-accessible: #D48A94;
+    --brand-gold-accessible: #D4AF37;
+    --brand-success-accessible: #4ADE80;
+
+    --surface-canvas: #120B0D;
+    --surface-card: #1B1214;
+    --surface-subtle: #26191B;
+    --border-default: #332326;
+    --text-primary: #FAF6F5;
+    --text-secondary: #B5A5A8;
+    --sidebar-bg: #160B0D;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--surface-canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.wine-gradient {
+  background: linear-gradient(135deg, #5A242B 0%, #722F37 50%, #8B3A44 100%);
+}
+
+.wine-rose-gradient {
+  background: linear-gradient(135deg, #722F37 0%, #8B3A44 70%, #B76E79 100%);
+}
+
+.glass-surface {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px -10px rgba(90, 36, 43, 0.08), 0 1px 3px rgba(31, 41, 55, 0.04);
+}
+
+.dark .glass-surface {
+  background: rgba(27, 18, 20, 0.92);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.48), 0 1px 3px rgba(0, 0, 0, 0.28);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+}
